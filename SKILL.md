@@ -1,6 +1,6 @@
 ---
 name: huashu-design
-description: 花叔Design（Huashu-Design）——用HTML做高保真原型、交互Demo、幻灯片、动画、设计变体探索+设计方向顾问+专家评审的一体化设计能力。HTML是工具不是媒介，根据任务embody不同专家（UX设计师/动画师/幻灯片设计师/原型师），避免web design tropes。触发词：做原型、设计Demo、交互原型、HTML演示、动画Demo、设计变体、hi-fi设计、UI mockup、prototype、设计探索、做个HTML页面、做个可视化、app原型、iOS原型、移动应用mockup、导出MP4、导出GIF、60fps视频、设计风格、设计方向、设计哲学、配色方案、视觉风格、推荐风格、选个风格、做个好看的、评审、好不好看、review this design。**主干能力**：Junior Designer工作流（先给假设+reasoning+placeholder再迭代）、反AI slop清单、React+Babel最佳实践、Tweaks变体切换、Speaker Notes演示、Starter Components（幻灯片外壳/变体画布/动画引擎/设备边框）、App原型专属守则（默认从Wikimedia/Met/Unsplash取真图、每台iPhone包AppPhone状态管理器可交互、交付前跑Playwright点击测试）、Playwright验证、HTML动画→MP4/GIF视频导出（25fps基础 + 60fps插帧 + palette优化GIF + 6首场景化BGM + 自动fade）。**需求模糊时的Fallback**：设计方向顾问模式——从5流派×20种设计哲学（Pentagram信息建筑/Field.io运动诗学/Kenya Hara东方极简/Sagmeister实验先锋等）推荐3个差异化方向，展示24个预制showcase（8场景×3风格），并行生成3个视觉Demo让用户选。**交付后可选**：专家级5维度评审（哲学一致性/视觉层级/细节执行/功能性/创新性各打10分+修复清单）。
+description: HTML-as-medium design skill for hi-fi prototypes, interactive demos, slide decks, motion graphics, design-variant exploration, design-direction advisor, and expert critique. HTML is the tool, not the medium — embody the right specialist per task (UX designer / animator / slide designer / prototyper) and avoid web design tropes. **Trigger phrases (English)**: "design a prototype", "interactive prototype", "HTML mockup", "design demo", "hi-fi design", "UI mockup", "iOS prototype", "mobile app mockup", "design variants", "design direction", "design philosophy", "recommend a style", "pick a style", "make this look good", "review this design", "critique this design", "design slides", "design a deck", "motion design", "export to MP4", "export GIF", "60fps animation", "make an infographic". **Trigger phrases (中文)**: 做原型、设计Demo、交互原型、HTML演示、动画Demo、设计变体、hi-fi设计、UI mockup、设计探索、做个HTML页面、做个可视化、app原型、iOS原型、移动应用mockup、导出MP4、导出GIF、60fps视频、设计风格、设计方向、设计哲学、配色方案、视觉风格、推荐风格、选个风格、做个好看的、评审、好不好看. **Core capabilities**: Junior Designer workflow (assumptions + reasoning + placeholders before iteration), anti-AI-slop checklist, React+Babel best practices, Tweaks runtime variant switching, speaker-notes presentations, starter components (slide shell / variant canvas / animation engine / device frames), App prototype rules (real images from Wikimedia/Met/Unsplash, per-iPhone AppPhone state manager, Playwright click testing pre-delivery), Playwright verification, HTML animation → MP4/GIF export (25fps base + 60fps interpolation + palette-optimised GIF + 6 scene-aware BGM tracks + auto-fade). **Fallback when requirements are vague**: design-direction advisor — 5 schools × 20 design philosophies (Pentagram information architecture / Field.io motion poetics / Kenya Hara Eastern minimalism / Sagmeister experimental avant-garde, etc.), recommend 3 differentiated directions, display 24 prebuilt showcases (8 scenarios × 3 styles), generate 3 visual demos in parallel for user selection. **Optional post-delivery**: expert 5-dimension critique (philosophy consistency / visual hierarchy / detail execution / functionality / innovation, each scored /10 + fix list). **SkinOS users — read `SKINOS-CONTEXT.md` (sibling to this file) BEFORE starting any task** for brand/asset locations and skill deferral rules.
 ---
 
 # 花叔Design · Huashu-Design
@@ -767,15 +767,13 @@ Skill 路径引用均采用**相对本 skill 根目录**的形式（`references/
 - HTML放项目目录，不要散落到`~/Downloads`
 - 最终产出用浏览器打开检查或用Playwright截图
 
-## Skill 推广水印（仅动画产出）
+## Skill 推广水印（仅动画产出 · SkinOS 默认关闭）
 
-**只在动画产出**（HTML 动画 → MP4 / GIF）默认带「**Created by Huashu-Design**」水印，辅助 skill 传播。**幻灯片 / 信息图 / 原型 / 网页等其他场景不加**——加了反而干扰用户实际使用。
+**SkinOS customisation (2026-04-27)**: watermark is **DISABLED by default** for all output. Only add it when the user explicitly asks for it. Reason: this is a private/internal fork, outputs go into client-facing brand work (TTC / Skinmart / GLO Skin Body) and a third-party watermark would be off-brand. The original upstream behaviour (watermark animations by default) is preserved below for reference only.
 
-- **必带场景**：HTML 动画 → 导出 MP4 / GIF（用户会拿去公众号、X、B站传播，水印能跟着流通）
-- **不带场景**：幻灯片（用户自己讲）、信息图（嵌文章）、App / 网页原型（设计 review）、配图
-- **第三方品牌的非官方致敬动画**：水印前加「非官方出品 · 」前缀，避免被误认为官方物料引发 IP 争议
-- **用户明确说"不要水印"**：尊重，移除
-- **水印模板**：
+- **Opt-in watermark**: only add the watermark template below when the user says "add watermark", "watermark this", or similar. Default = no watermark, regardless of output format.
+- **Original upstream behaviour (do NOT follow for SkinOS work)**: watermark animations by default to aid skill virality. Skip for slides / infographics / prototypes / web.
+- **Watermark template** (only used when explicitly requested):
   ```jsx
   <div style={{
     position: 'absolute', bottom: 24, right: 32,
